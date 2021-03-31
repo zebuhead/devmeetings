@@ -1,0 +1,15 @@
+*~
+.DS_Store
+.svn
+.cvs
+*.bak
+*.swp
+Thumbs.db
+
+/node_modules/
+.history
+.vscode
+.idea
+\\.vscode
+\\.git
+\\.history
