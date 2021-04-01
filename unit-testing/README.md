@@ -181,7 +181,7 @@ function getMonthFromDateString(string){
   return date.toLocaleString('en-US', options);
 }
 ```
-Write a few tests for this function to verify that it works
+Write a few tests for this function to verify that it works. Don't forget to add it to the export.
 
 Name parser
 ---
