@@ -33,8 +33,8 @@ programmer can keep tweaking or refactoring the code, but still know that it fun
 
 QA Process
 ---
-When tests are written during the QA process can be used to verify that the code functions as intended.
-However, the tests can also be used as a way to provide documentation by describing what the code should
+Tests can written during the QA process to verify that the code functions as intended.
+The tests can also be used as a way to provide documentation by describing what the code should
 be doing.
 
 Jest
@@ -44,7 +44,7 @@ Jest is a javascript testing framework. It's one of the most popular testing fra
 Installing Jest
 ---
 Jest can be installed using npm. 
-Start by setting up a new npm project. Start by creating in a new directory. Use the terminal to 
+Start by setting up a new npm project. Create a new directory. Use the terminal to 
 to navigate to the directory. In the terminal type
 ```shell
 npm init
@@ -67,10 +67,10 @@ Your directory should now contain a `node_modules` directory, a `package.json` f
 
 Creating Your First Test
 ---
-In Jest, a single test is a call the `test()` function. The `test()` function takes 2 parameters - the test description as a string and a callback function. 
-The documentation uses "arrow" functions for the callback. 
+In Jest, a single test is a call to the `test()` function. The `test()` function takes 2 parameters - the test description as a string and a callback function. 
+(The documentation uses "arrow" functions for the callback) 
 
-In the callback should be a conditions that are being tested. The callback in it's simplest form contains `expect(x).toBe(value)`. 
+The conditions that are being tested are in the callback. The callback in it's simplest form contains `expect(x).toBe(value)`. 
 
 In your project directory create a new file with the name `main.test.js`. (This file name is arbitrary and could be anything)
 
@@ -100,7 +100,7 @@ Time:        0.962 s, estimated 1 s
 Ran all test suites.
 ```
 
-If you are using VS Code, instead of using the terminal, you may be able to able to open the package.json file and click `Debug` right above
+If you are using VS Code, instead of using the terminal, you may be able to open the `package.json` file and click `Debug` right above
 
 ```json
   "scripts": {
@@ -168,6 +168,8 @@ test("can get email from url", () => {
     expect(mod.getUrlParameter("email", "example.com?name=John&email=john%40example.com")).toBe("john@example.com");
 });
 ```
+
+
 
 
 
