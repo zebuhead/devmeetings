@@ -70,7 +70,7 @@ Creating Your First Test
 In Jest, a single test is a call to the `test()` function. The `test()` function takes 2 parameters - the test description as a string and a callback function. 
 (The documentation uses "arrow" functions for the callback) 
 
-The conditions that are being tested are in the callback. The callback in it's simplest form contains `expect(x).toBe(value)`. 
+The conditions that are being tested are in the callback. The callback in it's simplest form contains `expect(x).toBe(value)`. `toBe()` is a "matcher" function. For a list of matchers see https://jestjs.io/docs/using-matchers
 
 In your project directory create a new file with the name `main.test.js`. (This file name is arbitrary and could be anything)
 
@@ -169,12 +169,38 @@ test("can get email from url", () => {
 });
 ```
 
+The last test will fail. Update `getUrlParameter()` so that the last test passes.
 
+Get Month From String
+---
+Add the following function to `main.js`
+```javascript
+function getMonthFromDateString(string){
+  var date = new Date(string);
+  var options = {month: 'long'};
+  return date.toLocaleString('en-US', options);
+}
+```
+Write a few tests for this function to verify that it works
 
+Name parser
+---
+Below are several test for a function called `parseName`. Write a function that will pass all of the tests. 
 
+```javascript
+test("parseName splits first and last", () => {
+    expect(mod.parseName("John Smith")).toEqual({firstname: "John", lastname: "Smith"});
+});
 
+test("parseName ignores middle name", () => {
+    expect(mod.parseName("John A Smith")).toEqual({firstname: "John", lastname: "Smith"});
+});
 
+test("parseName ignores suffixes", () => {
+    expect(mod.parseName("John Smith, MD")).toEqual({firstname: "John", lastname: "Smith"});
+});
 
+```
 
 
 
