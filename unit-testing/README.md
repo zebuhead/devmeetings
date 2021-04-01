@@ -139,7 +139,7 @@ test("32 F is 0 C", () => {
 ```
 Run the test now to verify that everything is working correctly. 
 
-**Create another test to test the 212F is equal to 100C.**
+**Create another test to verify that 212F is equal to 100C.**
 
 Another Example
 ---
